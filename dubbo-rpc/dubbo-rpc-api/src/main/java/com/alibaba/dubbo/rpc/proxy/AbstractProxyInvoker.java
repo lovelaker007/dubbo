@@ -36,6 +36,8 @@ public abstract class AbstractProxyInvoker<T> implements Invoker<T> {
 
     private final URL url;
 
+    // JdkProxyFactory的getInvoker方法创建了AbstractProxyInvoker子类（重写doInvoke方法）的实例
+
     public AbstractProxyInvoker(T proxy, Class<T> type, URL url) {
         if (proxy == null) {
             throw new IllegalArgumentException("proxy == null");
